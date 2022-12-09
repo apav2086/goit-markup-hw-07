@@ -1,4 +1,5 @@
 @use'../utils/variables';
+
 /* DO */
 .do {
     padding-top: 0;
@@ -27,16 +28,6 @@
     position: relative;
 }
 
-.do__container {
-    position: absolute;
-    bottom: 0;
-    background-color: rgba(47, 48, 58, 0.8);
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .do__text {
     color: #ffff;

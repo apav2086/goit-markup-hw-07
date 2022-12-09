@@ -1,4 +1,5 @@
 @use'../utils/variables';
+
 .hero__section {
     background-color: variables.$main-text-color;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
@@ -46,10 +47,11 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: var(--button-transition);
 
+    &:hover,
+    &:focus {
+            background-color: darkblue;
+            transition: variables.$transition-two;
+        }
+
 }
 
-.hero__button:hover,
-.hero__button:focus {
-    background-color: darkblue;
-    transition: variables.$transition-two;
-}

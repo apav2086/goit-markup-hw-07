@@ -1,89 +1,81 @@
 @use'../utils/variables';
 
-.portfolio__section {
+.portfolio-section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.button__list {
+.button-list {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
 }
 
-.button__item:not(:last-child) {
+.button-item:not(:last-child) {
     margin-right: 8px;
-
 }
 
-
-.portfolio__filter {
-    font-family: 'Roboto', sans-serif;
+.portfolio-filter {
+    font-family: variables.$main-text;
     color: variables.$portfolio-button-text;
     cursor: pointer;
     border: none;
     font-weight: 500;
     font-size: 16px;
-    line-height: calc(26/16);
+    line-height: 1.625;
     display: block;
     border-radius: 4px;
     padding: 6px 26px;
     background-color: #F5F4FA;
-
 }
 
-.portfolio__filter:hover,
-.portfolio__filter:focus {
+.portfolio-filter:hover,
+.portfolio-filter:focus {
     color: variables.$secondary-title-color;
     background-color: variables.$accent-color;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* PORTFOLIO PROJECTS SECTION */
-
-.portfolio__list {
+.portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    margin-top: calc(-1 * var(--card-gap));
-    margin-left: calc(-1 * var(--card-gap));
+    margin-top: calc(-1 * variables.$card-gap);
+    margin-left: calc(-1 * variables.$card-gap);
 }
 
-.portfolio__item {
-    flex-basis: calc(100% / 3 - var(--card-gap));
-    margin-left: var(--card-gap);
-    margin-top: var(--card-gap);
+.portfolio-item {
+    flex-basis: calc(33.3333333333% - variables.$card-gap);
+    margin-left: variables.$card-gap;
+    margin-top: variables.$card-gap;
     cursor: pointer;
 }
 
-.portfolio__image {
+.portfolio-image {
     display: block;
     max-width: 100%;
     height: auto;
-
 }
 
-.portfolio__item:hover .overlay-text,
-.portfolio__item:focus .overlay-text {
+.portfolio-item:hover .overlay-text,
+.portfolio-item:focus .overlay-text {
     transform: translateY(0);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
 
 .overlay {
     position: relative;
     overflow: hidden;
 }
 
-
-.overlay__text {
-    font-family: 'Roboto', sans-serif;
-    color: #ffff;
+.overlay-text {
+    font-family: variables.$main-text;
+    color: white;
     font-weight: 400;
     font-size: 18px;
-    line-height: calc(28/18);
+    line-height: 1.5555555556;
     position: absolute;
     display: block;
     padding: 63px 24px;
@@ -96,7 +88,6 @@
     transition: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .card-content {
@@ -104,11 +95,9 @@
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
-
 }
 
-
-.portfolio__title {
+.portfolio-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -116,7 +105,7 @@
     color: variables.$main-text-color;
 }
 
-.portfolio__text {
+.portfolio-text {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.88;

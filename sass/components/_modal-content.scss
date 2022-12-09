@@ -1,4 +1,5 @@
 @use'../utils/variables';
+
 .modal {
     height: 581px;
     width: 528px;
@@ -12,6 +13,7 @@
     transform: translate(-50%, -50%);
 }
 
+/* Modal Close Button */
 .modal__button--close {
     color: #000000;
     background-color: transparent;
@@ -30,20 +32,18 @@
     transition: variables.$button-transition;
 }
 
-
 .modal__button--close:hover,
 .modal__button--close:focus {
-    color: variables.$accent-color;
+    color:variables.$accent-color;
     text-decoration: none;
     cursor: pointer;
-
 }
 
 .modal__icon {
     fill: currentColor;
 }
 
-.backdrop--hidden {
+.is-hidden {
     pointer-events: none;
     opacity: 0%;
 }
@@ -51,7 +51,7 @@
 .backdrop {
     width: 100%;
     height: 100%;
-    background-color: var(--backdrop);
+    background-color: variables.$backdrop;
     position: fixed;
     top: 0;
     display: flex;
@@ -61,13 +61,12 @@
 }
 
 .form__title {
-    font-family: 'Roboto', sans-serif;
+    font-family: variables.$main-text;
     font-weight: 700;
     font-size: 20px;
-    line-height: calc(23.44/20);
+    line-height: 1.172;
     text-align: center;
     margin-bottom: 12px;
-
 }
 
 .form {
@@ -76,14 +75,13 @@
 
 .field__wrapper {
     margin-bottom: 10px;
-
 }
 
 .form__label {
     display: block;
     font-weight: 400;
     font-size: 12px;
-    line-height: calc(14/12);
+    line-height: 1.1666666667;
     letter-spacing: 0.01em;
     color: variables.$secondary-text-color;
     margin-bottom: 5px;
@@ -97,9 +95,9 @@
 .input {
     font-weight: 400;
     font-size: 12px;
-    line-height: calc(14/12);
+    line-height: 1.1666666667;
     letter-spacing: 0.01em;
-    color: rgba (117, 117, 117, 0.5);
+    color: rgba 117, 117, 117, 0.5;
     width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -110,8 +108,8 @@
 }
 
 .input:focus {
-    border-color: variables.$link-color;
-    color: variables.$link-color;
+    border-color: #2196F3;
+    color: #2196F3;
     outline: none;
 }
 
@@ -124,9 +122,8 @@
 }
 
 .input:focus~.input__icon {
-    fill: variables.$link-color;
+    fill: #2196F3;
 }
-
 
 textarea {
     resize: none;
@@ -138,19 +135,18 @@ textarea {
 }
 
 textarea:focus {
-    border-color: variables.$link-color;
-    color: variables.$link-color;
+    border-color: #2196F3;
+    color: #2196F3;
     outline: none;
 }
 
 .checkbox__label {
     display: flex;
     cursor: pointer;
-
 }
 
 .modal__checkbox {
-    color: variables.$background-color;
+    color: white;
     width: 15px;
     height: 15px;
     border: 1px solid #212121;
@@ -160,7 +156,6 @@ textarea:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .checkbox {
@@ -176,12 +171,9 @@ textarea:focus {
     overflow: hidden;
 }
 
-
-
 .checkbox:checked+.checkbox__label>.modal__checkbox {
-    background-color: variables.$link-color;
+    background-color: #2196F3;
     border: none;
-
 }
 
 .form__button--send {
@@ -189,9 +181,9 @@ textarea:focus {
     height: 50px;
     font-weight: 700;
     font-size: 16px;
-    line-height: calc(30/16);
+    line-height: 1.875;
     letter-spacing: 0.06em;
-    color: variables.$secondary-title-color;
+    color: variables.$secondary-text-color;
     background-color: variables.$link-color;
     display: block;
     align-items: center;
@@ -201,12 +193,12 @@ textarea:focus {
     padding: 10px 80px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .send:hover,
 .send:focus {
     background-color: darkblue;
-    transition: variables.$transition-two;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

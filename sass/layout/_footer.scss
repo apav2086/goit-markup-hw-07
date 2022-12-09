@@ -1,6 +1,7 @@
 @use'../utils/variables';
+
 .footer__section {
-    background-color: var(--footer-color);
+    background-color: variables.$footer-color;
     padding: 60px 0;
 }
 
@@ -25,12 +26,12 @@
 }
 
 .footer__logo {
-    color: var(--accent-color);
+    color: variables.$accent-color;
     text-decoration: none;
-    font-family: "Raleway", sans-serif;
+    font-family: variables.$logo-text;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.1923076923;
+    line-height: calc(31/26);
     margin-bottom: 9px;
     display: block;
 }
@@ -42,8 +43,8 @@
 .footer__addres--location {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.7142857143;
-    color: var(--secondary-title-color);
+    line-height: calc(24/14);
+    color: variables.$secondary-title-color;
     margin-bottom: 2px;
 }
 
@@ -54,8 +55,8 @@
 .footer__contacts {
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.7142857143;
-    color: var(--secondary-title-color);
+    line-height: calc(24/14);
+    color: variables.$secondary-title-color;
     opacity: 0.6;
 }
 
@@ -63,7 +64,7 @@
     color: white;
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.1721428571;
+    line-height: calc(16.41/14);
     margin-bottom: 20px;
 }
 
@@ -76,18 +77,19 @@
     width: 44px;
     height: 44px;
     color: white;
-    background-color: var(--contact-color);
+    background-color: variables.$contact-color;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .media__link:hover,
 .media__link:focus {
     color: white;
-    background-color: var(--accent-color);
+    background-color: variables.$accent-color;
 }
 
 .media__icon {
@@ -110,7 +112,7 @@
     color: white;
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.1721428571;
+    line-height: calc(16.41/14);
     margin-bottom: 20px;
 }
 
@@ -129,7 +131,7 @@
 .subscription__input::placeholder {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.25;
+    line-height: calc(20/16);
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
@@ -147,29 +149,30 @@
     height: 50px;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.875;
-    align-items: center;
+    line-height: calc(30/16);
     letter-spacing: 0.06em;
-    color: var(--secondary-title-color);
-    background-color: var(--link-color);
+    color: variables.$secondary-title-color;
+    background-color: variables.$link-color;
     cursor: pointer;
     display: flex;
-    margin-left: 12px;
-    margin-top: 108px;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
     padding: 10px 20px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: var(--button-transition);
+    transition: variables.$button-transition;
 }
 
 .subscription__button:hover,
 .subscription__button:focus {
     background-color: darkblue;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .subscription__icon {
+    margin-left: 30px;
+    margin-top: 13px;
+    margin-right: 8px;
     fill: currentColor;
 }
